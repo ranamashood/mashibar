@@ -6,7 +6,7 @@
 #include <ostream>
 #include <string>
 
-Memory::Memory() {
+modules::Memory::Memory() {
   parseMemFile();
   update();
   setLabel(std::to_string(memTotal));
@@ -16,7 +16,7 @@ Memory::Memory() {
   // std::cout << kbToPer(30963453, 80961231) << std::endl;
 }
 
-void Memory::parseMemFile() {
+void modules::Memory::parseMemFile() {
   std::ifstream file("/proc/meminfo");
   std::string line;
   while (std::getline(file, line)) {
@@ -27,8 +27,8 @@ void Memory::parseMemFile() {
   }
 }
 
-void Memory::update() {
-  memTotal = kbToGb(memInfo["MemTotal"]);
+void modules::Memory::update() {
+  memTotal = utils::kbToGb(memInfo["MemTotal"]);
   memFree = memInfo["MemAvailable"];
   swapTotal = memInfo["SwapTotal"];
   swapFree = memInfo["SwapFree"];

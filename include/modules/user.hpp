@@ -4,6 +4,7 @@
 #include "include/module.hpp"
 #include <gtkmm/window.h>
 
+namespace modules {
 class User : public Module {
 public:
   User();
@@ -11,5 +12,6 @@ public:
 protected:
   std::string getUserName();
 };
+} // namespace modules
 
 #endif // USER_HPP

@@ -1,5 +1,5 @@
 #include "include/modules/user.hpp"
 
-User::User() { setLabel(getUserName()); }
+modules::User::User() { setLabel(getUserName()); }
 
-std::string User::getUserName() { return g_get_user_name(); }
+std::string modules::User::getUserName() { return g_get_user_name(); }

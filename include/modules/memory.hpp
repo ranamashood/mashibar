@@ -6,6 +6,7 @@
 #include <string>
 #include <unordered_map>
 
+namespace modules {
 class Memory : public Module {
 public:
   Memory();
@@ -18,5 +19,5 @@ protected:
 
   float memTotal, memFree, swapTotal, swapFree;
 };
-
+} // namespace modules
 #endif // MEMORY_HPP

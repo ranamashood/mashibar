@@ -6,8 +6,8 @@
 Client::Client() {
   set_title("MashiBar");
 
-  User user;
-  Memory memory;
+  modules::User user;
+  modules::Memory memory;
 
   Bar bar;
   bar.addModule(user);
