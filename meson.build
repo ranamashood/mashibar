@@ -2,6 +2,8 @@ project('org.mashood.apps.mashibar', 'cpp')
 
 executable(
   meson.project_name(),
+  'include/modules/memory.hpp',
+  'src/modules/memory.cpp',
   'include/modules/user.hpp',
   'src/modules/user.cpp',
   'include/module.hpp',
@@ -10,6 +12,8 @@ executable(
   'src/bar.cpp',
   'include/client.hpp',
   'src/client.cpp',
+  'include/utils.hpp',
+  'src/utils.cpp',
   # 'include/components/label.hpp',
   # 'src/components/label.cpp',
   'src/main.cpp',
