@@ -9,7 +9,7 @@ public:
   User();
 
 protected:
-  Glib::ustring getUserName();
+  std::string getUserName();
 };
 
 #endif // USER_HPP

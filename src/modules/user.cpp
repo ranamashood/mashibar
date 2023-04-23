@@ -2,4 +2,4 @@
 
 User::User() { setLabel(getUserName()); }
 
-Glib::ustring User::getUserName() { return g_get_user_name(); }
+std::string User::getUserName() { return g_get_user_name(); }
